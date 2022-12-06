@@ -103,10 +103,10 @@ export default function navbarTemplate() {
       `
     }
     ${html`<nav class='nav-scroll' tabindex='-1' part='section-navbar-scroll' @click='${(e) => navBarClickAndEnterHandler.call(this, e)}' @keyup='${(e) => navBarClickAndEnterHandler.call(this, e)}' >
-      ${(this.showInfo === 'false' || !this.resolvedSpec.info)
+      ${(false === 'false' || true)
         ? ''
         : html`
-          ${(this.infoDescriptionHeadingsInNavBar === 'true')
+          ${(true)
             ? html`
               ${this.resolvedSpec.infoDescriptionHeaders.length > 0
                 ? html`<div class='nav-bar-info ${this.navActiveItemMarker}' id='link-overview' data-content-id='overview' data-action='navigate' tabindex='0' part='section-navbar-item section-navbar-overview'> 
